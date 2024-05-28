@@ -1,8 +1,13 @@
 package org.example;
 
 public class MoodAnalyzer {
-
-    public String MoodAnalyzer(String msg){
+    private String msg;
+    public MoodAnalyzer(){
+    }
+    public MoodAnalyzer(String msg){
+        this.msg =msg;
+    }
+    public String MoodAnalyzer(){
         if(msg.contains("sad")){
             return "SAD";
         }else{
