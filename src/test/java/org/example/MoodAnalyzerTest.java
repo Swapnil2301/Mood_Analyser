@@ -9,8 +9,8 @@ class MoodAnalyzerTest {
 
     @Test
     public void moodAnalyzer() {
-        MoodAnalyzer obj1=new MoodAnalyzer("I am in sad mood".toLowerCase());
-        String mood=obj1.MoodAnalyzer();
+        MoodAnalyzer obj1=new MoodAnalyzer();
+        String mood=obj1.MoodAnalyzer("I am in sad mood".toLowerCase());
         Assertions.assertEquals(mood,"SAD");
     }
 }
