@@ -2,11 +2,24 @@ package org.example;
 
 public class MoodAnalyzer {
 
-    public String MoodAnalyzer(String msg){
-        if(msg.contains("sad")){
-            return "SAD";
-        }else{
-            return "HAPPY";
+    private String msg;
+
+    
+    public MoodAnalyzer(String msg){
+        this.msg = msg;
+    }
+
+    public String analyzeMood(){
+        try{
+            if(msg.contains("sad")){
+                return "SAD";
+            }
+            else {
+                return "HAPPY";
+            }
+        }
+        catch (NullPointerException e){
+            return "INVALID";
         }
     }
 }
